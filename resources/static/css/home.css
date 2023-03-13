@@ -1,0 +1,86 @@
+#container_1{
+    width: 320px;
+    margin: 50px auto;
+    display: grid;
+    grid-gap: 10px;
+}
+
+.card{
+    position: relative;
+    margin: 20px 10px;
+    border: 1px solid #fff;
+    background-color: rgba(63, 151, 155, 0.62);
+}
+.words{
+    position: absolute;
+    left: 40px;
+    top: 300px;
+    padding: 10px;
+    text-align: left;
+}
+.image{
+    position:absolute;
+    left: 280px;
+
+    top:10px;
+
+}
+.image img{
+    width: 80%;
+    height: 80%;
+}
+/* 중복된 부분은 작성하지 않는다! */
+@media screen and (max-width:768px){
+    #container_1{
+        width: auto;
+        margin: 50px auto;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .card{
+        position: relative;
+        width: 550px;
+        height: 250px;
+    }
+    .words{
+        position: absolute;
+        top:15px;
+        width: 200px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1719px){
+    #container_1{
+        width: auto;
+        margin: 50px auto;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .card{
+        position: relative;
+        width: 350px;
+        height: 180px;
+    }
+    .words{
+        position: absolute;
+        top:15px;
+        width: 200px;
+    }
+}
+
+@media screen and (min-width:1720px){
+    #container_1{
+        right:100px;
+        width: auto;
+        margin: 50px auto;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .card{
+        position: relative;
+
+        width: 550px;
+        height: 250px;
+    }
+    .words{
+        position: absolute;
+        top:15px;
+        width: 200px;
+    }
+}
